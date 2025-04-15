@@ -5,24 +5,24 @@
 <div style="font-size:2.5em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Digit Recognition using Artificial Neural Networks</div>
 
 # Table of Contents 
-<details>
-  <summary><a href="#1-project-overview"><i><b>1. Project Overview</b></i></a></summary>
-</details>
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#1-project-overview"><i><b>1. Project Overview</b></i></a>
+</div>
 &nbsp;
 
-<details>
-  <summary><a href="#2-educational-objectives"><i><b>2. Educational Objectives</b></i></a></summary>
-</details>
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#2-educational-objectives"><i><b>2. Educational Objectives</b></i></a>
+</div>
 &nbsp;
 
-<details>
-  <summary><a href="#3-prerequisites"><i><b>3. Prerequisites</b></i></a></summary>
-</details>
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#3-prerequisites"><i><b>3. Prerequisites</b></i></a>
+</div>
 &nbsp;
 
-<details>
-  <summary><a href="#4-project-structure"><i><b>4. Project Structure</b></i></a></summary>
-</details>
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4-project-structure"><i><b>4. Project Structure</b></i></a>
+</div>
 &nbsp;
 
 <details>
@@ -46,9 +46,9 @@
 </details>
 &nbsp;
 
-<details>
-  <summary><a href="#7-learning-exercises-for-students"><i><b>7. Learning Exercises for Students</b></i></a></summary>
-</details>
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#7-learning-exercises-for-students"><i><b>7. Learning Exercises for Students</b></i></a>
+</div>
 &nbsp;
 
 <details>
@@ -60,14 +60,14 @@
 </details>
 &nbsp;
 
-<details>
-  <summary><a href="#9-resources-for-further-learning"><i><b>9. Resources for Further Learning</b></i></a></summary>
-</details>
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#9-resources-for-further-learning"><i><b>9. Resources for Further Learning</b></i></a>
+</div>
 &nbsp;
 
-<details>
-  <summary><a href="#10-license"><i><b>10. License</b></i></a></summary>
-</details>
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#10-license"><i><b>10. License</b></i></a>
+</div>
 &nbsp;
 
 # 1. Project Overview
