@@ -2,7 +2,9 @@
     <img src="figures/mnist_samples.png" alt="MNIST Samples" width="70%" style="margin: 20px 0;">
 </div>
 
-<div style="font-size:2.5em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Digit Recognition using Artificial Neural Networks</div>
+<div align="center">
+  <h1>MNIST Digit Recognition using Artificial Neural Networks</h1>
+</div>
 
 # Table of Contents 
 <div>
