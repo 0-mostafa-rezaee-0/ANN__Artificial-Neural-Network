@@ -101,27 +101,37 @@ No Python or ML libraries need to be installed locally, as everything runs withi
 
 ```
 .
-├── Dockerfile               # Docker configuration for environment setup
-├── docker-compose.yml       # Docker Compose configuration for service definition
-├── requirements.txt         # Python dependencies for the project
-├── start.sh                 # Startup script for Docker container
-├── data/                    # Data directory
-│   ├── mnist/               # Raw and processed MNIST data (generated at runtime)
-│   └── mnist_samples/       # Sample images extracted from MNIST for visualization
-├── figures/                 # Visualizations and plots
-│   ├── mnist_samples.png    # Grid of sample MNIST digits
-│   ├── confusion_matrix.png # Model performance visualization
-│   ├── training_history.png # Training/validation metrics over time
-│   └── prediction_samples.png # Examples of model predictions
-├── notebooks/               # Jupyter notebooks for interactive learning
-│   └── ANN_MNIST-data.ipynb # Main notebook for the project
-├── models/                  # Saved model files
-│   ├── mnist_ann_best.h5    # Best model based on validation accuracy
-│   └── mnist_ann_final.h5   # Final trained model
-└── scripts/                 # Python scripts
-    ├── data_prep.py         # Download and preprocess MNIST data
-    ├── extract_sample_images.py # Extract sample images for visualization
-    └── train_ann.py         # Train the ANN model
++---Dockerfile                <-- Docker configuration for environment setup
++---docker-compose.yml        <-- Docker Compose configuration for service definition
++---requirements.txt          <-- Python dependencies for the project
++---start.sh                  <-- Startup script for Docker container
+|
++---data/                     <-- Data directory
+|   +---mnist/                <-- Raw and processed MNIST data (generated at runtime)
+|   +---mnist_samples/        <-- Sample images extracted from MNIST for visualization
+|   +---README.md             <-- Documentation for the dataset
+|
++---figures/                  <-- Visualizations and plots
+|   +---mnist_samples.png     <-- Grid of sample MNIST digits
+|   +---confusion_matrix.png  <-- Model performance visualization
+|   +---training_history.png  <-- Training/validation metrics over time
+|   +---prediction_samples.png <-- Examples of model predictions
+|   +---README.md             <-- Documentation for visualizations
+|
++---notebooks/                <-- Jupyter notebooks for interactive learning
+|   +---ANN_MNIST-data.ipynb  <-- Main notebook for the project
+|   +---README.md             <-- Documentation for notebooks
+|
++---models/                   <-- Saved model files
+|   +---mnist_ann_best.h5     <-- Best model based on validation accuracy
+|   +---mnist_ann_final.h5    <-- Final trained model
+|   +---README.md             <-- Documentation for models
+|
++---scripts/                  <-- Python scripts
+    +---data_prep.py          <-- Download and preprocess MNIST data
+    +---extract_sample_images.py <-- Extract sample images for visualization
+    +---train_ann.py          <-- Train the ANN model
+    +---README.md             <-- Documentation for scripts
 ```
 
 # 5. Getting Started
