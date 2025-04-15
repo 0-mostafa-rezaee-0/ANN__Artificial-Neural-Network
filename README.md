@@ -6,48 +6,50 @@
 
 # 1. Project Overview
 
-This project implements an Artificial Neural Network (ANN) to recognize handwritten digits from the MNIST dataset. The entire project is containerized using Docker for easy setup and reproducibility.
+This project implements an Artificial Neural Network (ANN) to recognize handwritten digits from the MNIST dataset. The entire project is containerized using Docker for easy setup and reproducibility, making it an ideal learning environment for students exploring machine learning fundamentals.
 
-# 2. Table of Contents
+The MNIST dataset is a collection of 70,000 grayscale images of handwritten digits (0-9), widely considered the "Hello World" of machine learning. Our implementation achieves approximately 98% accuracy using a straightforward feedforward neural network architecture.
 
-- [1. Project Overview](#1-project-overview)
-- [2. Table of Contents](#2-table-of-contents)
-- [3. Prerequisites](#3-prerequisites)
-- [4. Project Structure](#4-project-structure)
-- [5. Getting Started](#5-getting-started)
-  - [5.1. Clone the Repository](#51-clone-the-repository)
-  - [5.2. Start the Docker Container](#52-start-the-docker-container)
-  - [5.3. Access Jupyter Notebook](#53-access-jupyter-notebook)
-- [6. Project Components](#6-project-components)
-  - [6.1. Data Preparation](#61-data-preparation)
-  - [6.2. Data Exploration](#62-data-exploration)
-  - [6.3. Model Training](#63-model-training)
-  - [6.4. Evaluation and Visualization](#64-evaluation-and-visualization)
-- [7. Results](#7-results)
-- [8. License](#8-license)
+# 2. Educational Objectives
+
+Through this project, students will learn:
+
+- **Machine Learning Fundamentals**: Understanding data preprocessing, model training, evaluation metrics, and visualization techniques
+- **Neural Network Architecture**: Designing multi-layer feedforward networks with appropriate activation functions
+- **Regularization Techniques**: Implementing dropout to prevent overfitting
+- **Docker Containerization**: Working with isolated, reproducible development environments
+- **Data Visualization**: Creating meaningful visualizations to understand model performance
+- **Python Best Practices**: Organizing code, documentation, and project structure
 
 # 3. Prerequisites
 
 - Docker and Docker Compose installed on your system
 - Git for cloning the repository
+- Basic understanding of Python and machine learning concepts
 
-No Python or ML libraries need to be installed locally, as everything runs within the Docker container.
+No Python or ML libraries need to be installed locally, as everything runs within the Docker container, thus eliminating compatibility issues across different operating systems and environments.
 
 # 4. Project Structure
 
 ```
 .
-├── Dockerfile               # Docker configuration
-├── docker-compose.yml       # Docker Compose configuration
-├── requirements.txt         # Python dependencies
-├── start.sh                 # Startup script for Docker
+├── Dockerfile               # Docker configuration for environment setup
+├── docker-compose.yml       # Docker Compose configuration for service definition
+├── requirements.txt         # Python dependencies for the project
+├── start.sh                 # Startup script for Docker container
 ├── data/                    # Data directory
-│   ├── mnist/               # Raw and processed MNIST data (not in git due to size)
-│   └── mnist_samples/       # Sample images extracted from MNIST
+│   ├── mnist/               # Raw and processed MNIST data (generated at runtime)
+│   └── mnist_samples/       # Sample images extracted from MNIST for visualization
 ├── figures/                 # Visualizations and plots
-├── notebooks/               # Jupyter notebooks
+│   ├── mnist_samples.png    # Grid of sample MNIST digits
+│   ├── confusion_matrix.png # Model performance visualization
+│   ├── training_history.png # Training/validation metrics over time
+│   └── prediction_samples.png # Examples of model predictions
+├── notebooks/               # Jupyter notebooks for interactive learning
 │   └── ANN_MNIST-data.ipynb # Main notebook for the project
 ├── models/                  # Saved model files
+│   ├── mnist_ann_best.h5    # Best model based on validation accuracy
+│   └── mnist_ann_final.h5   # Final trained model
 └── scripts/                 # Python scripts
     ├── data_prep.py         # Download and preprocess MNIST data
     ├── extract_sample_images.py # Extract sample images for visualization
@@ -81,11 +83,18 @@ Open your browser and navigate to:
 http://localhost:8888
 ```
 
+This will open Jupyter Notebook where you can run the interactive notebook `ANN_MNIST-data.ipynb`.
+
 # 6. Project Components
 
 ## 6.1. Data Preparation
 
-The project uses the MNIST dataset, which contains 70,000 grayscale images of handwritten digits (60,000 for training and 10,000 for testing).
+The MNIST dataset consists of 28×28 pixel grayscale images of handwritten digits. The data preparation process includes:
+
+1. **Downloading**: Automatic download using TensorFlow's dataset API
+2. **Normalization**: Scaling pixel values from [0-255] to [0-1] for better training
+3. **Reshaping**: Flattening 28×28 images into 784-length vectors for input to the neural network
+4. **Train-Test Split**: Using the standard 60,000 training and 10,000 test images
 
 To prepare the data:
 
@@ -94,51 +103,92 @@ To prepare the data:
 python scripts/data_prep.py
 ```
 
-This script:
-- Downloads the MNIST dataset using TensorFlow
-- Normalizes pixel values to the range [0, 1]
-- Reshapes images to vectors for the ANN
-- Saves the processed data to the data/mnist/ directory
+## 6.2. Neural Network Architecture
 
-## 6.2. Data Exploration
+Our model uses a feedforward neural network with:
 
-Sample images are extracted and visualized:
+1. **Input Layer**: 784 neurons (one for each pixel in the flattened image)
+2. **Hidden Layers**:
+   - First hidden layer: 512 neurons with ReLU activation
+   - Second hidden layer: 256 neurons with ReLU activation
+   - Third hidden layer: 128 neurons with ReLU activation
+3. **Dropout Layers**: Added after each hidden layer (rates: 0.2, 0.3, 0.2) to prevent overfitting
+4. **Output Layer**: 10 neurons with softmax activation (probability distribution over digits 0-9)
 
-```bash
-# Inside the Docker container
-python scripts/extract_sample_images.py
-```
+## 6.3. Training Process
 
-This creates:
-- 20 examples of each digit in data/mnist_samples/
-- A grid visualization in figures/mnist_samples.png
-- A CSV file with image features
+The model is trained using:
 
-## 6.3. Model Training
+1. **Optimizer**: Adam optimizer with default learning rate
+2. **Loss Function**: Categorical cross-entropy (standard for multi-class classification)
+3. **Batch Size**: 128 samples per gradient update
+4. **Early Stopping**: Training stops when validation loss stops improving (patience=10)
+5. **Model Checkpointing**: Saves the best model based on validation accuracy
 
-The ANN model can be trained using:
+To train the model:
 
 ```bash
 # Inside the Docker container
 python scripts/train_ann.py
 ```
 
-The model architecture includes:
-- Input layer (784 neurons for flattened 28×28 images)
-- Hidden layers with dropout for regularization
-- Output layer (10 neurons for digits 0-9)
-
 ## 6.4. Evaluation and Visualization
 
-The training process generates:
-- Confusion matrix
-- Training history plots (accuracy and loss)
-- Sample predictions visualization
+The model evaluation produces:
 
-# 7. Results
+1. **Confusion Matrix**: Shows correct and incorrect classifications for each digit
+2. **Classification Report**: Detailed metrics including precision, recall, and F1-score
+3. **Training History**: Plots showing accuracy and loss during training
+4. **Sample Predictions**: Visualization of correctly and incorrectly classified digits
 
-The ANN model achieves high accuracy on the MNIST dataset, typically around 98%. Detailed results, including confusion matrices and sample predictions, can be found in the figures/ directory after training.
+# 7. Learning Exercises for Students
 
-# 8. License
+1. **Modify the Network Architecture**:
+   - Add or remove hidden layers
+   - Change the number of neurons in each layer
+   - Experiment with different activation functions (sigmoid, tanh, leaky ReLU)
+
+2. **Tune Hyperparameters**:
+   - Try different optimizers (SGD, RMSprop)
+   - Modify learning rates
+   - Adjust dropout rates
+   - Change batch sizes and number of epochs
+
+3. **Implement Data Augmentation**:
+   - Add rotation, translation, or scaling to training images
+   - Create a data generator for augmentation
+
+4. **Compare with Other Models**:
+   - Implement a Convolutional Neural Network (CNN)
+   - Try a simpler model like Logistic Regression
+   - Compare performance metrics across different approaches
+
+5. **Visualization Improvements**:
+   - Create t-SNE visualizations of feature spaces
+   - Generate class activation maps
+   - Visualize neuron activations for different digits
+
+# 8. Common Issues and Solutions
+
+## 8.1. Docker Container Issues
+
+- **Port Already in Use**: If you see an error about port 8888 being already in use, change the port mapping in docker-compose.yml from "8888:8888" to another port like "8889:8888".
+- **Container Not Starting**: Ensure Docker service is running on your machine.
+- **Memory Issues**: Increase memory allocation for Docker in the settings if the model training is too slow.
+
+## 8.2. Training Issues
+
+- **Low Accuracy**: Check normalization of input data and model architecture.
+- **Overfitting**: Increase dropout rates or add L1/L2 regularization.
+- **Slow Training**: Reduce batch size or simplify the model architecture.
+
+# 9. Resources for Further Learning
+
+- [TensorFlow Documentation](https://www.tensorflow.org/tutorials/keras/classification)
+- [Neural Networks and Deep Learning by Michael Nielsen](http://neuralnetworksanddeeplearning.com/)
+- [Deep Learning Book by Ian Goodfellow, Yoshua Bengio, and Aaron Courville](https://www.deeplearningbook.org/)
+- [Kaggle MNIST Competitions](https://www.kaggle.com/c/digit-recognizer)
+
+# 10. License
 
 This project is licensed under the terms of the LICENSE file included in the repository.
