@@ -9,7 +9,6 @@ This directory contains visualizations and plots generated during the MNIST digi
 ## 2.1. Dataset Visualizations
 
 - **mnist_samples.png**: A grid visualization showing 5 examples of each digit (0-9) from the MNIST dataset.
-- **digit_distribution.png**: Bar chart showing the distribution of digit classes in the training dataset.
 
 ## 2.2. Training Visualizations
 
