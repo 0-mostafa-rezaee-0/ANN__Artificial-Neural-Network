@@ -1,8 +1,74 @@
-<div style="font-size:2.5em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Digit Recognition using Artificial Neural Networks</div>
-
 <div align="center">
     <img src="figures/mnist_samples.png" alt="MNIST Samples" width="70%" style="margin: 20px 0;">
 </div>
+
+<div style="font-size:2.5em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Digit Recognition using Artificial Neural Networks</div>
+
+# Table of Contents 
+<details>
+  <summary><a href="#1-project-overview"><i><b>1. Project Overview</b></i></a></summary>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#2-educational-objectives"><i><b>2. Educational Objectives</b></i></a></summary>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#3-prerequisites"><i><b>3. Prerequisites</b></i></a></summary>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#4-project-structure"><i><b>4. Project Structure</b></i></a></summary>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#5-getting-started"><i><b>5. Getting Started</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#51-clone-the-repository">5.1. Clone the Repository</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#52-start-the-docker-container">5.2. Start the Docker Container</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#53-access-jupyter-notebook">5.3. Access Jupyter Notebook</a><br>
+  </div>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#6-project-components"><i><b>6. Project Components</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#61-data-preparation">6.1. Data Preparation</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#62-neural-network-architecture">6.2. Neural Network Architecture</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#63-training-process">6.3. Training Process</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#64-evaluation-and-visualization">6.4. Evaluation and Visualization</a><br>
+  </div>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#7-learning-exercises-for-students"><i><b>7. Learning Exercises for Students</b></i></a></summary>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#8-common-issues-and-solutions"><i><b>8. Common Issues and Solutions</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#81-docker-container-issues">8.1. Docker Container Issues</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#82-training-issues">8.2. Training Issues</a><br>
+  </div>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#9-resources-for-further-learning"><i><b>9. Resources for Further Learning</b></i></a></summary>
+</details>
+&nbsp;
+
+<details>
+  <summary><a href="#10-license"><i><b>10. License</b></i></a></summary>
+</details>
+&nbsp;
 
 # 1. Project Overview
 
