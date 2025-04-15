@@ -1,11 +1,11 @@
 services:
-  data-science-project:
+  mnist-ann-project:
     build:
       context: .
       args:
-        - KERNEL_NAME=${PROJECT_NAME:-data-science-project}
-    image: ${PROJECT_NAME:-data-science-project}
-    container_name: ${PROJECT_NAME:-data-science-project}
+        - KERNEL_NAME=${PROJECT_NAME:-mnist-ann-project}
+    image: ${PROJECT_NAME:-mnist-ann-project}
+    container_name: ${PROJECT_NAME:-mnist-ann-project}
     volumes:
       - .:/app
     stdin_open: true
@@ -13,4 +13,4 @@ services:
     ports:
       - "8888:8888" # Jupyter Notebook
     environment:
-      - KERNEL_NAME=${PROJECT_NAME:-data-science-project}
+      - KERNEL_NAME=${PROJECT_NAME:-mnist-ann-project}
