@@ -8,7 +8,6 @@ This directory stores the trained Artificial Neural Network (ANN) models for MNI
 
 - **mnist_ann_best.h5**: The model with the best validation accuracy during training (saved via ModelCheckpoint callback).
 - **mnist_ann_final.h5**: The final model after training is complete.
-- **mnist_ann_notebook.h5**: Model saved from the Jupyter notebook implementation (may have different hyperparameters).
 
 # 3. Model Architecture
 
