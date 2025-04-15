@@ -1,28 +1,3 @@
-# Figures Folder
-
-This folder contains images and diagrams used in the Docker Data Science project documentation.
-
-## Contents
-
-- `docker.jpg`: An illustration explaining Docker concepts and architecture.
-- `port.jpg`: A diagram visualizing network port mapping in Docker containers.
-- `volume.jpg`: An explanation of Docker volumes and how data persistence works across containers.
-
-## Usage
-
-These images are referenced in the main README.md to provide visual explanations of key Docker concepts. They help users better understand:
-
-1. The relationship between Dockerfiles, images, and containers
-2. How network ports function in containerized applications
-3. Data persistence through volume mounting
-
-## Best Practices
-
-- Use descriptive filenames for images
-- Ensure images are optimized for web viewing
-- Provide text alternatives in documentation for accessibility
-- Keep images up-to-date when concepts change
-
 <div style="font-size:2.0em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Visualizations Directory</div>
 
 # 1. Overview
@@ -78,4 +53,4 @@ The training history plot shows:
 - How accuracy improves over training epochs
 - How loss decreases over training epochs
 - The gap between training and validation metrics (indicator of overfitting)
-- Where early stopping occurred to prevent overfitting 
+- Where early stopping occurred to prevent overfitting
