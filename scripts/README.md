@@ -1,4 +1,32 @@
-<div style="font-size:2.0em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Neural Network Scripts</div>
+<div align="center">
+  <h1>MNIST Neural Network Scripts</h1>
+</div>
+
+# Table of Contents 
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#1-overview"><i><b>1. Overview</b></i></a>
+</div>
+&nbsp;
+
+<details>
+  <summary><a href="#2-scripts"><i><b>2. Scripts</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#21-data_preppy">2.1. data_prep.py</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#22-extract_sample_imagespy">2.2. extract_sample_images.py</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#23-train_annpy">2.3. train_ann.py</a><br>
+  </div>
+</details>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#3-running-order"><i><b>3. Running Order</b></i></a>
+</div>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4-dependencies"><i><b>4. Dependencies</b></i></a>
+</div>
+&nbsp;
 
 # 1. Overview
 

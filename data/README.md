@@ -1,4 +1,32 @@
-<div style="font-size:2.0em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Data Directory</div>
+<div align="center">
+  <h1>MNIST Data Directory</h1>
+</div>
+
+# Table of Contents 
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#1-overview"><i><b>1. Overview</b></i></a>
+</div>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#2-directory-structure"><i><b>2. Directory Structure</b></i></a>
+</div>
+&nbsp;
+
+<details>
+  <summary><a href="#3-data-files"><i><b>3. Data Files</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#31-mnist-dataset-mnist">3.1. MNIST Dataset (mnist/)</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#32-mnist-samples-mnist_samples">3.2. MNIST Samples (mnist_samples/)</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#33-sample-csv-structure">3.3. Sample CSV Structure</a><br>
+  </div>
+</details>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4-generating-the-data"><i><b>4. Generating the Data</b></i></a>
+</div>
+&nbsp;
 
 # 1. Overview
 

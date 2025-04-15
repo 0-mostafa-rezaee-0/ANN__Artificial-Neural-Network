@@ -1,4 +1,37 @@
-<div style="font-size:2.0em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Neural Network Models</div>
+<div align="center">
+  <h1>MNIST Neural Network Models</h1>
+</div>
+
+# Table of Contents 
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#1-overview"><i><b>1. Overview</b></i></a>
+</div>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#2-model-files"><i><b>2. Model Files</b></i></a>
+</div>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#3-model-architecture"><i><b>3. Model Architecture</b></i></a>
+</div>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4-training-configuration"><i><b>4. Training Configuration</b></i></a>
+</div>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#5-performance"><i><b>5. Performance</b></i></a>
+</div>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#6-loading-a-saved-model"><i><b>6. Loading a Saved Model</b></i></a>
+</div>
+&nbsp;
 
 # 1. Overview
 

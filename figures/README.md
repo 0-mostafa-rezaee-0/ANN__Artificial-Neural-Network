@@ -1,4 +1,36 @@
-<div style="font-size:2.0em; font-weight:bold; text-align:center; margin-top:20px;">MNIST Visualizations Directory</div>
+<div align="center">
+  <h1>MNIST Visualizations Directory</h1>
+</div>
+
+# Table of Contents 
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#1-overview"><i><b>1. Overview</b></i></a>
+</div>
+&nbsp;
+
+<details>
+  <summary><a href="#2-visualization-files"><i><b>2. Visualization Files</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#21-dataset-visualizations">2.1. Dataset Visualizations</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#22-training-visualizations">2.2. Training Visualizations</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#23-evaluation-visualizations">2.3. Evaluation Visualizations</a><br>
+  </div>
+</details>
+&nbsp;
+
+<div>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#3-generating-visualizations"><i><b>3. Generating Visualizations</b></i></a>
+</div>
+&nbsp;
+
+<details>
+  <summary><a href="#4-interpretation"><i><b>4. Interpretation</b></i></a></summary>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#41-confusion-matrix">4.1. Confusion Matrix</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#42-training-history">4.2. Training History</a><br>
+  </div>
+</details>
+&nbsp;
 
 # 1. Overview
 
