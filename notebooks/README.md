@@ -11,8 +11,9 @@
 <details>
   <summary><a href="#2-notebooks"><i><b>2. Notebooks</b></i></a></summary>
   <div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#21-ann_mnist-dataipynb">2.1. ANN_MNIST-data.ipynb</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#22-exploratory_analysisipynb">2.2. exploratory_analysis.ipynb</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#21-01_data_preparationipynb">2.1. 01_data_preparation.ipynb</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#22-02_model_trainingipynb">2.2. 02_model_training.ipynb</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#23-exploratory_analysisipynb">2.3. exploratory_analysis.ipynb</a><br>
   </div>
 </details>
 &nbsp;
@@ -38,19 +39,33 @@ This directory contains Jupyter notebooks for the MNIST digit recognition projec
 
 # 2. Notebooks
 
-## 2.1. ANN_MNIST-data.ipynb
+## 2.1. 01_data_preparation.ipynb
 
-This is the main notebook for the project, covering the entire machine learning pipeline:
+This notebook focuses on the data loading and preparation steps:
 
 1. **Setup and Import**: Loading necessary libraries and setting up the environment
-2. **Data Loading and Exploration**: Downloading and exploring the MNIST dataset
-3. **Data Preprocessing**: Normalizing and reshaping the data for neural network training
-4. **Model Building**: Creating the ANN architecture with multiple hidden layers and dropout
-5. **Model Training**: Training the model with early stopping and checkpointing
-6. **Evaluation**: Assessing model performance using accuracy metrics and confusion matrix
-7. **Visualization**: Generating plots for training history and prediction examples
+2. **Data Loading**: Downloading the MNIST dataset using TensorFlow's datasets module
+3. **Data Exploration**: Exploring the structure of the dataset, shape, and basic statistics
+4. **Data Visualization**: Visualizing sample images from different digit classes
+5. **Data Preprocessing**: Normalizing and preparing the data for model training
 
-## 2.2. exploratory_analysis.ipynb
+## 2.2. 02_model_training.ipynb
+
+This notebook covers the modeling, training, and evaluation pipeline:
+
+1. **Data Loading**: Loading the preprocessed MNIST data
+2. **Model Architecture**: Creating an Artificial Neural Network with:
+   - Input layer (784 neurons)
+   - Three hidden layers (512, 256, 128 neurons) with ReLU activation
+   - Dropout layers (0.2, 0.3, 0.4) for regularization
+   - Output layer (10 neurons) with softmax activation
+3. **Model Compilation**: Setting up the optimizer, loss function, and evaluation metrics
+4. **Model Training**: Training the model with callbacks for early stopping and model checkpointing
+5. **Model Evaluation**: Evaluating performance on the test set with accuracy, confusion matrix, and classification report
+6. **Results Visualization**: Plotting training/validation metrics and prediction examples
+7. **Model Saving**: Saving the trained model for future use
+
+## 2.3. exploratory_analysis.ipynb
 
 This notebook contains additional exploratory data analysis:
 - Basic environment verification
@@ -71,6 +86,10 @@ To run these notebooks:
    ```
 
 3. Navigate to the `notebooks` directory and open the desired notebook
+
+4. Execute the notebooks in order:
+   - Start with `01_data_preparation.ipynb`
+   - Then proceed to `02_model_training.ipynb`
 
 Alternatively, you can connect VS Code to the running container and open the notebooks directly in VS Code's Jupyter extension.
 

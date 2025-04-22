@@ -119,7 +119,8 @@ No Python or ML libraries need to be installed locally, as everything runs withi
 |   +---README.md             <-- Documentation for visualizations
 |
 +---notebooks/                <-- Jupyter notebooks for interactive learning
-|   +---ANN_MNIST-data.ipynb  <-- Main notebook for the project
+|   +---01_data_preparation.ipynb  <-- Data loading, exploration and preparation
+|   +---02_model_training.ipynb    <-- Model building, training and evaluation
 |   +---README.md             <-- Documentation for notebooks
 |
 +---models/                   <-- Saved model files
@@ -161,7 +162,9 @@ Open your browser and navigate to:
 http://localhost:8888
 ```
 
-This will open Jupyter Notebook where you can run the interactive notebook `ANN_MNIST-data.ipynb`.
+This will open Jupyter Notebook where you can run the interactive notebooks:
+- `01_data_preparation.ipynb` - Explore and prepare the MNIST dataset
+- `02_model_training.ipynb` - Build, train, and evaluate the neural network model
 
 # 6. Project Components
 
@@ -174,7 +177,7 @@ The MNIST dataset consists of 28×28 pixel grayscale images of handwritten digit
 3. **Reshaping**: Flattening 28×28 images into 784-length vectors for input to the neural network
 4. **Train-Test Split**: Using the standard 60,000 training and 10,000 test images
 
-To prepare the data:
+To prepare the data, run the `01_data_preparation.ipynb` notebook or:
 
 ```bash
 # Inside the Docker container
@@ -190,7 +193,7 @@ Our model uses a feedforward neural network with:
    - First hidden layer: 512 neurons with ReLU activation
    - Second hidden layer: 256 neurons with ReLU activation
    - Third hidden layer: 128 neurons with ReLU activation
-3. **Dropout Layers**: Added after each hidden layer (rates: 0.2, 0.3, 0.2) to prevent overfitting
+3. **Dropout Layers**: Added after each hidden layer (rates: 0.2, 0.3, 0.4) to prevent overfitting
 4. **Output Layer**: 10 neurons with softmax activation (probability distribution over digits 0-9)
 
 ## 6.3. Training Process
@@ -203,7 +206,7 @@ The model is trained using:
 4. **Early Stopping**: Training stops when validation loss stops improving (patience=10)
 5. **Model Checkpointing**: Saves the best model based on validation accuracy
 
-To train the model:
+To train the model, run the `02_model_training.ipynb` notebook or:
 
 ```bash
 # Inside the Docker container
