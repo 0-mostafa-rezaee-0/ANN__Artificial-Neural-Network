@@ -7,7 +7,7 @@ This will create your own copy of this project, which you can modify freely — 
 ---    
 
 <div align="center">
-    <img src="figures/logo.png" alt="MNIST Samples" width="70%" style="margin: 20px 0;">
+    <img src="figures/banner.png" alt="banner" width="70%" style="margin: 20px 0;">
 </div>
 
 <div align="center">
